@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" *ngIf="isLoggedIn$ | async as isLoggedIn">
+  <span>
+    <img src="assets/img/angular.svg" class="angular-logo">
+    Angular login example
+  </span>
+  <span class="fill-remainning-space"></span>
+  <button mat-button>Menu Option 01</button>
+  <button mat-button>Menu Option 02</button>
+  <button mat-button router-link="login">Login</button>
+  <button mat-button (click)="onLogout()" *ngIf="isLoggedIn$">Logout</button>
+</mat-toolbar>
